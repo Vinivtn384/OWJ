@@ -2,7 +2,7 @@
 
 Utilitário modular, defensivo e reversível em PowerShell para otimização, limpeza, debloat e gestão de serviços no Windows 10/11.
 
-## Como executar direto pelo PowerShell
+## Como executar online (PowerShell)
 
 Abra o **PowerShell** ou **Terminal** e execute o comando abaixo (a elevação para Administrador é solicitada automaticamente):
 
@@ -14,6 +14,18 @@ irm "[https://raw.githubusercontent.com/Vinivtn384/Otimizador_Windows_Jaru/main/
 > ```powershell
 > [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; irm "[https://raw.githubusercontent.com/Vinivtn384/Otimizador_Windows_Jaru/main/OtimizadorWindowsJaru_v25.ps1](https://raw.githubusercontent.com/Vinivtn384/Otimizador_Windows_Jaru/main/OtimizadorWindowsJaru_v25.ps1)" | iex
 > ```
+
+## Como executar offline (Arquivo .bat / Pendrive)
+
+Ideal para uso portátil em pendrive ou em computadores sem acesso à internet:
+
+1. Clique no arquivo **`Otimizador_Jaru_v25.bat`** na lista acima e use o botão **Download raw file** (ou clique no botão verde **Code** → **Download ZIP** e extraia os arquivos).
+2. Salve o arquivo em uma pasta local ou no pendrive e dê um **duplo-clique** para iniciar.
+3. Aceite a solicitação de privilégios de **Administrador (UAC)**.
+
+> **Aviso do SmartScreen:** Como o arquivo `.bat` foi baixado da internet, o Windows Defender pode exibir uma tela azul de proteção na primeira execução. Clique em **Mais informações** e depois em **Executar assim mesmo**.
+>
+> **Nota:** Se estiver usando a versão de lançador separado (`Iniciar_Otimizador_v25.bat`), mantenha o `.bat` e o `OtimizadorWindowsJaru_v25.ps1` sempre na mesma pasta.
 
 ## O que o script faz
 
@@ -28,6 +40,8 @@ irm "[https://raw.githubusercontent.com/Vinivtn384/Otimizador_Windows_Jaru/main/
 
 ## Segurança e Reversão
 
-- **Logs e backups:** salvos automaticamente em `%USERPROFILE%\OtimizadorJaru` (ou na pasta local do script, se executado offline).
+- **Onde ficam os logs e backups:**
+  - **Modo online (`irm | iex`):** salvos automaticamente em `%USERPROFILE%\OtimizadorJaru`.
+  - **Modo offline (`.bat` ou `.ps1` local):** salvos na mesma pasta ou pendrive onde o arquivo foi executado.
 - **Backup mestre protegido:** os estados originais do Registro (`master_reg.json`), serviços (`servicos_original.json`) e plano de energia (`power_original.txt`) não são sobrescritos em execuções repetidas.
-- **Para reverter:** execute novamente o script e escolha a opção **[6] DESFAZER**, ou utilize o Ponto de Restauração criado no Windows.
+- **Para reverter:** abra o utilitário novamente e escolha a opção **[6] DESFAZER**, ou utilize o Ponto de Restauração criado no Windows.
