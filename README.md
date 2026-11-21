@@ -7,13 +7,10 @@ Utilitário modular, defensivo e reversível em PowerShell para otimização, li
 Abre o **PowerShell** ou **Terminal** e executa o comando abaixo (a elevação para Administrador é solicitada automaticamente):
 
 ```powershell
-irm "[https://raw.githubusercontent.com/Vinivtn384/OWJ/main/OtimizadorWindowsJaru_v25.ps1](https://raw.githubusercontent.com/Vinivtn384/OWJ/main/OtimizadorWindowsJaru_v25.ps1)" | iex
+irm "https://raw.githubusercontent.com/Vinivtn384/OWJ/main/OtimizadorWindowsJaru_v25.ps1" | iex
 ```
 
-> **Windows 10 antigo (erro de TLS/SSL):**
-> ```powershell
-> [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; irm "[https://raw.githubusercontent.com/Vinivtn384/OWJ/main/OtimizadorWindowsJaru_v25.ps1](https://raw.githubusercontent.com/Vinivtn384/OWJ/main/OtimizadorWindowsJaru_v25.ps1)" | iex
-> ```
+
 
 ## Como executar offline (Ficheiro .bat / Pen USB)
 
